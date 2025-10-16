@@ -1,0 +1,4 @@
+repository "kitchen_relay/kitchen_relay@15668709606184@cloud"
+  path "/"
+    br "/main"
+    co "/main"
