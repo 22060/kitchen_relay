@@ -452,7 +452,7 @@ Transform:
   m_GameObject: {fileID: 87745673}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37, y: -67, z: 0}
+  m_LocalPosition: {x: -237.5, y: 423, z: 0}
   m_LocalScale: {x: 60.09, y: 61.25, z: 100}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -855,6 +855,7 @@ GameObject:
   - component: {fileID: 1215597706}
   - component: {fileID: 1215597705}
   - component: {fileID: 1215597707}
+  - component: {fileID: 1215597708}
   m_Layer: 0
   m_Name: pot
   m_TagString: Pot
@@ -929,7 +930,7 @@ Transform:
   m_GameObject: {fileID: 1215597704}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 281, y: -1.6308529, z: 0}
+  m_LocalPosition: {x: 428, y: -7, z: 0}
   m_LocalScale: {x: 1000, y: 1000, z: 1000}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -981,6 +982,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.16, y: 0.16}
   m_EdgeRadius: 0
+--- !u!114 &1215597708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215597704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71e001f846fecce46bae9e7ccb05b454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Pot
+  itemsInPot: []
+  recipeBook: {fileID: 2073533111}
 --- !u!1 &1341605756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,7 +1095,7 @@ Transform:
   m_GameObject: {fileID: 1341605756}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -63, y: 343, z: 0}
+  m_LocalPosition: {x: -3, y: 222, z: 0}
   m_LocalScale: {x: 1000, y: 1000, z: 1000}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1487,9 +1502,61 @@ Transform:
   m_GameObject: {fileID: 1932485805}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -180, y: -62, z: 0}
+  m_LocalPosition: {x: -380.5, y: 428, z: 0}
   m_LocalScale: {x: 60.09, y: 61.25, z: 100}
   m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2073533110
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2073533112}
+  - component: {fileID: 2073533111}
+  m_Layer: 0
+  m_Name: Tomatochicken
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2073533111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073533110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0f32936015e52f4782de5a38367b882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RecipeBook
+  recipes:
+  - recipeName: TomatoChicken
+    ingredients:
+    - Tomato
+    - Meat
+    resultItem: TomatoChicken
+    score: 10
+    cookTime: 3
+--- !u!4 &2073533112
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073533110}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 45.81879, y: 86.03114, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1578,7 +1645,7 @@ Transform:
   m_GameObject: {fileID: 2081686627}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -322.5, y: -62, z: 0}
+  m_LocalPosition: {x: -523, y: 428, z: 0}
   m_LocalScale: {x: 60.09, y: 61.25, z: 100}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1634,6 +1701,7 @@ BoxCollider2D:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 592298327}
   - {fileID: 1508963449}
   - {fileID: 2081686629}
   - {fileID: 1932485808}
@@ -1641,6 +1709,6 @@ SceneRoots:
   - {fileID: 1215597706}
   - {fileID: 1341605759}
   - {fileID: 596209909}
-  - {fileID: 592298327}
   - {fileID: 1025636252}
   - {fileID: 31213351}
+  - {fileID: 2073533112}
