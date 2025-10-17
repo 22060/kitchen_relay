@@ -37,8 +37,29 @@ public class Interaction : MonoBehaviour
         // --- 鍋に入れてスコア加算 ---
         else if (other.CompareTag("Pot") && player.carryingItems.Count > 0)
         {
-            FindAnyObjectByType<GameManager>().AddScore(player.carryingItems.Count);
-            player.carryingItems.Clear();
+            foreach (var item in player.carryingItems)
+            {
+                if (other.GetComponent<Pot>().AddItem(item) == 1)
+                {
+                    Debug.Log($"Added {item} to pot");
+                    FindAnyObjectByType<GameManager>().AddScore(5);
+                    player.carryingItems.Remove(item);
+                    break;
+                }
+            }
+        }
+
+        // ---鍋から食材を取り出す---
+        else if (other.CompareTag("Pot") && player.carryingItems.Count == 0)
+        {
+            var pot = other.GetComponent<Pot>();
+            if (pot.itemsInPot.Count > 0)
+            {
+                string item = pot.itemsInPot[pot.itemsInPot.Count - 1];
+                pot.itemsInPot.RemoveAt(pot.itemsInPot.Count - 1);
+                player.carryingItems.Add(item);
+                Debug.Log($"Took {item} from pot");
+            }
         }
 
         // --- 一時置き場（Storage） ---
